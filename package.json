@@ -1,35 +1,34 @@
 {
-  "name": "kubernetes-topology-graph",
-  "version": "0.0.23",
-  "description": "Provides a simple force directed topology graph of kubernetes items.",
+  "name": "application-topology-graph",
+  "version": "0.0.1",
+  "description": "Provides a simple force directed topology graph of Java application items.",
   "main": "dist/topology-graph.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kubernetes-ui/topology-graph.git"
+    "url": "git+https://github.com/Maarc/application-graph.git"
   },
-  "keywords": [
-    "kubernetes",
-    "angularjs"
+  "author": [
+    "Stef Walter <stefw@redhat.com>",
+    "Marc Zottner <marc@redhat.com>"
   ],
-  "author": "Stef Walter <stefw@redhat.com>",
   "license": "LGPL-2.1",
   "bugs": {
-    "url": "https://github.com/kubernetes-ui/topology-graph/issues"
+    "url": "https://github.com/Maarc/application-graph/issues"
   },
-  "homepage": "https://github.com/kubernetes-ui/topology-graph#readme",
+  "homepage": "https://github.com/Maarc/application-graph#readme",
   "devDependencies": {
     "bower": "*",
-    "grunt": "~0.4.5",
-    "grunt-contrib-connect": "~0.9.0",
-    "grunt-contrib-jshint": "~0.11.1",
-    "grunt-contrib-less": "~1.0.0",
-    "grunt-wiredep": "~2.0.0",
-    "grunt-contrib-watch": "~0.6.1",
+    "grunt": "^1.0.3",
     "grunt-contrib-concat": "~0.5.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-less": "^2.0.0",
     "grunt-contrib-uglify": "*",
-    "grunt-run": "*"
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-run": "*",
+    "grunt-wiredep": "^3.0.1"
   }
 }

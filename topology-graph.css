@@ -3,37 +3,37 @@ kubernetes-topology-graph {
     user-select: none;
 }
 
-.kube-topology g {
+.app-topology g {
     font-family: PatternFlyIcons-webfont;
     font-size: 18px;
     text-anchor: middle;
     cursor: pointer;
 }
 
-.kube-topology g text {
+.app-topology g text {
     stroke: none;
     stroke-width: 0px;
 }
 
-.kube-topology g.weak use {
+.app-topology g.weak use {
     opacity: .6;
 }
 
-.kube-topology g.fixed use {
+.app-topology g.fixed use {
     stroke-width: 2px;
 }
 
-.kube-topology g.selected use,
-.kube-topology g.selected circle {
+.app-topology g.selected use,
+.app-topology g.selected circle {
     stroke-width: 4px;
 }
 
-.kube-topology line {
+.app-topology line {
     stroke: #aaa;
     stroke-width: 1;
 }
 
-.kube-topology line.ReplicationControllerPod {
+.app-topology line.ExternalJarWar {
     stroke-linecap: round;
     stroke-dasharray: 5, 2;
 }
@@ -63,4 +63,3 @@ kubernetes-topology-icon.active use {
 kubernetes-topology-icon:hover use {
     opacity: 0.7;
 }
-

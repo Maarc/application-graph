@@ -1,47 +1,16 @@
 sink({
     "items": {
-        "39113587-088f-11e5-b0b0-525400398fe5": {
-            "apiVersion": "v1beta3",
-            "kind": "Node",
+        "39113587": {
+            "kind": "Ear",
             "metadata": {
-                "creationTimestamp": "2015-06-01T18:51:33Z",
-                "name": "node-1.rha",
-                "resourceVersion": "10065",
-                "selfLink": "/api/v1beta3/nodes/node-1.rha",
-                "uid": "39113587-088f-11e5-b0b0-525400398fe5"
-            },
-            "spec": {
-                "externalID": "node-1.rha"
-            },
-            "status": {
-                "capacity": {
-                    "cpu": "1",
-                    "memory": "4047776Ki"
-                },
-                "conditions": [
-                    {
-                        "lastHeartbeatTime": "2015-06-02T15:41:47Z",
-                        "lastTransitionTime": "2015-06-01T18:52:24Z",
-                        "reason": "kubelet is posting ready status",
-                        "status": "True",
-                        "type": "Ready"
-                    }
-                ],
-                "nodeInfo": {
-                    "bootID": "d51f8e13-399c-4245-9e88-3091c4d1f6f2",
-                    "containerRuntimeVersion": "docker://1.6.0",
-                    "kernelVersion": "4.0.4-301.fc22.x86_64",
-                    "kubeProxyVersion": "v0.16.2-659-g63182318c5876b",
-                    "kubeletVersion": "v0.16.2-659-g63182318c5876b",
-                    "machineID": "0fed1fe218d1a8449292cce385ada4e6",
-                    "osImage": "Red Hat Enterprise Linux Atomic Host 7.1",
-                    "systemUUID": "0FED1FE2-18D1-A844-9292-CCE385ADA4E6"
-                }
+                "name": "My_App_1.ear",
+                "java": "1.8_3_3",
+                "size": "23MB"
             }
         },
-        "3953a982-088f-11e5-b0b0-525400398fe5": {
+        "3953a982": {
             "apiVersion": "v1beta3",
-            "kind": "Service",
+            "kind": "Jar",
             "metadata": {
                 "creationTimestamp": "2015-06-01T18:51:33Z",
                 "labels": {
@@ -52,7 +21,7 @@ sink({
                 "namespace": "default",
                 "resourceVersion": "5",
                 "selfLink": "/api/v1beta3/namespaces/default/services/kubernetes",
-                "uid": "3953a982-088f-11e5-b0b0-525400398fe5"
+                "uid": "3953a982"
             },
             "spec": {
                 "portalIP": "10.254.0.2",
@@ -69,9 +38,9 @@ sink({
             },
             "status": {}
         },
-        "3953c23b-088f-11e5-b0b0-525400398fe5": {
+        "3953c23b": {
             "apiVersion": "v1beta3",
-            "kind": "Service",
+            "kind": "Jar",
             "metadata": {
                 "creationTimestamp": "2015-06-01T18:51:33Z",
                 "labels": {
@@ -82,7 +51,7 @@ sink({
                 "namespace": "default",
                 "resourceVersion": "6",
                 "selfLink": "/api/v1beta3/namespaces/default/services/kubernetes-ro",
-                "uid": "3953c23b-088f-11e5-b0b0-525400398fe5"
+                "uid": "3953c23b"
             },
             "spec": {
                 "portalIP": "10.254.0.1",
@@ -99,9 +68,9 @@ sink({
             },
             "status": {}
         },
-        "79ec9243-08fc-11e5-a9e7-525400398fe5": {
+        "79ec9243": {
             "apiVersion": "v1beta3",
-            "kind": "Service",
+            "kind": "Jar",
             "metadata": {
                 "creationTimestamp": "2015-06-02T07:53:37Z",
                 "labels": {
@@ -112,28 +81,12 @@ sink({
                 "namespace": "sample",
                 "resourceVersion": "1515",
                 "selfLink": "/api/v1beta3/namespaces/sample/services/database",
-                "uid": "79ec9243-08fc-11e5-a9e7-525400398fe5"
-            },
-            "spec": {
-                "portalIP": "10.254.234.188",
-                "ports": [
-                    {
-                        "name": "",
-                        "port": 5434,
-                        "protocol": "TCP",
-                        "targetPort": 3306
-                    }
-                ],
-                "selector": {
-                    "name": "database"
-                },
-                "sessionAffinity": "None"
-            },
-            "status": {}
+                "uid": "79ec9243"
+            }
         },
-        "7a01f790-08fc-11e5-a9e7-525400398fe5": {
+        "7a01f790": {
             "apiVersion": "v1beta3",
-            "kind": "Service",
+            "kind": "Jar",
             "metadata": {
                 "creationTimestamp": "2015-06-02T07:53:37Z",
                 "labels": {
@@ -144,28 +97,12 @@ sink({
                 "namespace": "sample",
                 "resourceVersion": "1517",
                 "selfLink": "/api/v1beta3/namespaces/sample/services/frontend",
-                "uid": "7a01f790-08fc-11e5-a9e7-525400398fe5"
-            },
-            "spec": {
-                "portalIP": "10.254.83.42",
-                "ports": [
-                    {
-                        "name": "",
-                        "port": 80,
-                        "protocol": "TCP",
-                        "targetPort": 8080
-                    }
-                ],
-                "selector": {
-                    "name": "frontend"
-                },
-                "sessionAffinity": "None"
-            },
-            "status": {}
+                "uid": "7a01f790"
+            }
         },
-        "7a0ea065-08fc-11e5-a9e7-525400398fe5": {
+        "7a0ea065": {
             "apiVersion": "v1beta3",
-            "kind": "ReplicationController",
+            "kind": "ExternalJar",
             "metadata": {
                 "creationTimestamp": "2015-06-02T07:53:37Z",
                 "labels": {
@@ -176,223 +113,26 @@ sink({
                 "namespace": "sample",
                 "resourceVersion": "1527",
                 "selfLink": "/api/v1beta3/namespaces/sample/replicationcontrollers/database",
-                "uid": "7a0ea065-08fc-11e5-a9e7-525400398fe5"
+                "uid": "7a0ea065"
             },
-            "spec": {
-                "replicas": 1,
-                "selector": {
-                    "name": "database",
-                    "template": "ruby-helloworld-sample"
-                },
-                "template": {
-                    "metadata": {
-                        "creationTimestamp": null,
-                        "labels": {
-                            "name": "database",
-                            "template": "ruby-helloworld-sample"
-                        }
-                    },
-                    "spec": {
-                        "containers": [
-                            {
-                                "capabilities": {},
-                                "env": [
-                                    {
-                                        "name": "MYSQL_ROOT_PASSWORD",
-                                        "value": "rQHfVnTo"
-                                    },
-                                    {
-                                        "name": "MYSQL_DATABASE",
-                                        "value": "root"
-                                    }
-                                ],
-                                "image": "mysql",
-                                "imagePullPolicy": "IfNotPresent",
-                                "name": "ruby-helloworld-database",
-                                "ports": [
-                                    {
-                                        "containerPort": 3306,
-                                        "protocol": "TCP"
-                                    }
-                                ],
-                                "resources": {},
-                                "securityContext": {
-                                    "capabilities": {}
-                                },
-                                "terminationMessagePath": "/dev/termination-log"
-                            }
-                        ],
-                        "dnsPolicy": "ClusterFirst",
-                        "restartPolicy": "Always",
-                        "volumes": null
-                    }
-                }
-            },
-            "status": {
-                "replicas": 1
-            }
         },
-        "7a132ea2-08fc-11e5-a9e7-525400398fe5": {
-            "apiVersion": "v1beta3",
-            "kind": "Pod",
+        "7a132ea2": {
+            "kind": "War",
             "metadata": {
-                "annotations": {
-                    "kubernetes.io/created-by": "{\"kind\":\"SerializedReference\",\"apiVersion\":\"v1beta3\",\"reference\":{\"kind\":\"ReplicationController\",\"namespace\":\"sample\",\"name\":\"database\",\"uid\":\"7a0ea065-08fc-11e5-a9e7-525400398fe5\",\"apiVersion\":\"v1beta3\",\"resourceVersion\":\"1519\"}}"
-                },
-                "creationTimestamp": "2015-06-02T07:53:37Z",
-                "generateName": "database-",
-                "labels": {
-                    "name": "database",
-                    "template": "ruby-helloworld-sample"
-                },
-                "name": "database-f807k",
+                "name": "database-f807k.war",
                 "namespace": "sample",
-                "resourceVersion": "1546",
-                "selfLink": "/api/v1beta3/namespaces/sample/pods/database-f807k",
-                "uid": "7a132ea2-08fc-11e5-a9e7-525400398fe5"
-            },
-            "spec": {
-                "containers": [
-                    {
-                        "capabilities": {},
-                        "env": [
-                            {
-                                "name": "MYSQL_ROOT_PASSWORD",
-                                "value": "rQHfVnTo"
-                            },
-                            {
-                                "name": "MYSQL_DATABASE",
-                                "value": "root"
-                            }
-                        ],
-                        "image": "mysql",
-                        "imagePullPolicy": "IfNotPresent",
-                        "name": "ruby-helloworld-database",
-                        "ports": [
-                            {
-                                "containerPort": 3306,
-                                "protocol": "TCP"
-                            }
-                        ],
-                        "resources": {},
-                        "securityContext": {
-                            "capabilities": {}
-                        },
-                        "terminationMessagePath": "/dev/termination-log"
-                    }
-                ],
-                "dnsPolicy": "ClusterFirst",
-                "host": "node-1.rha",
-                "restartPolicy": "Always",
-                "volumes": null
-            },
-            "status": {
-                "Condition": [
-                    {
-                        "status": "True",
-                        "type": "Ready"
-                    }
-                ],
-                "containerStatuses": [
-                    {
-                        "containerID": "docker://87e17c20159bb290f2cd7b3f364c9303e8f3b0e4a01d7059adfb1ceadbe5aa6f",
-                        "image": "mysql",
-                        "imageID": "docker://ff78d9bb5f46b3a619310a8e3f3e62b98ce08b476d0d5d4088f1853d604f8218",
-                        "lastState": {},
-                        "name": "ruby-helloworld-database",
-                        "ready": true,
-                        "restartCount": 0,
-                        "state": {
-                            "running": {
-                                "startedAt": "2015-06-02T07:53:47Z"
-                            }
-                        }
-                    }
-                ],
-                "phase": "Running",
-                "podIP": "18.0.61.8"
             }
         },
-        "7a1a82bd-08fc-11e5-a9e7-525400398fe5": {
-            "apiVersion": "v1beta3",
-            "kind": "ReplicationController",
+        "7a1a82bd": {
+            "kind": "ExternalJar",
             "metadata": {
-                "creationTimestamp": "2015-06-02T07:53:37Z",
-                "labels": {
-                    "name": "frontend",
-                    "template": "ruby-helloworld-sample"
-                },
-                "name": "frontend",
+                "name": "frontend-ext.jar",
                 "namespace": "sample",
-                "resourceVersion": "1656",
-                "selfLink": "/api/v1beta3/namespaces/sample/replicationcontrollers/frontend",
-                "uid": "7a1a82bd-08fc-11e5-a9e7-525400398fe5"
-            },
-            "spec": {
-                "replicas": 5,
-                "selector": {
-                    "name": "frontend",
-                    "template": "ruby-helloworld-sample"
-                },
-                "template": {
-                    "metadata": {
-                        "creationTimestamp": null,
-                        "labels": {
-                            "name": "frontend",
-                            "template": "ruby-helloworld-sample"
-                        }
-                    },
-                    "spec": {
-                        "containers": [
-                            {
-                                "capabilities": {},
-                                "env": [
-                                    {
-                                        "name": "ADMIN_USERNAME",
-                                        "value": "admin6TM"
-                                    },
-                                    {
-                                        "name": "ADMIN_PASSWORD",
-                                        "value": "xImx1tHR"
-                                    },
-                                    {
-                                        "name": "MYSQL_ROOT_PASSWORD",
-                                        "value": "rQHfVnTo"
-                                    },
-                                    {
-                                        "name": "MYSQL_DATABASE",
-                                        "value": "root"
-                                    }
-                                ],
-                                "image": "openshift/ruby-hello-world",
-                                "imagePullPolicy": "IfNotPresent",
-                                "name": "ruby-helloworld",
-                                "ports": [
-                                    {
-                                        "containerPort": 8080,
-                                        "protocol": "TCP"
-                                    }
-                                ],
-                                "resources": {},
-                                "securityContext": {
-                                    "capabilities": {}
-                                },
-                                "terminationMessagePath": "/dev/termination-log"
-                            }
-                        ],
-                        "dnsPolicy": "ClusterFirst",
-                        "restartPolicy": "Always",
-                        "volumes": null
-                    }
-                }
-            },
-            "status": {
-                "replicas": 5
             }
         },
-        "891054a1-0890-11e5-a3b5-525400398fe5": {
+        "891054a1": {
             "apiVersion": "v1beta3",
-            "kind": "Service",
+            "kind": "Jar",
             "metadata": {
                 "creationTimestamp": "2015-06-01T19:00:57Z",
                 "labels": {
@@ -402,7 +142,7 @@ sink({
                 "namespace": "guestbook4",
                 "resourceVersion": "81",
                 "selfLink": "/api/v1beta3/namespaces/guestbook4/services/redis-master",
-                "uid": "891054a1-0890-11e5-a3b5-525400398fe5"
+                "uid": "891054a1"
             },
             "spec": {
                 "portalIP": "10.254.166.23",
@@ -421,9 +161,9 @@ sink({
             },
             "status": {}
         },
-        "89222e96-0890-11e5-a3b5-525400398fe5": {
+        "89222e96": {
             "apiVersion": "v1beta3",
-            "kind": "Service",
+            "kind": "Jar",
             "metadata": {
                 "creationTimestamp": "2015-06-01T19:00:57Z",
                 "labels": {
@@ -433,7 +173,7 @@ sink({
                 "namespace": "guestbook4",
                 "resourceVersion": "83",
                 "selfLink": "/api/v1beta3/namespaces/guestbook4/services/redis-slave",
-                "uid": "89222e96-0890-11e5-a3b5-525400398fe5"
+                "uid": "89222e96"
             },
             "spec": {
                 "portalIP": "10.254.94.104",
@@ -452,9 +192,9 @@ sink({
             },
             "status": {}
         },
-        "892e8cee-0890-11e5-a3b5-525400398fe5": {
+        "892e8cee": {
             "apiVersion": "v1beta3",
-            "kind": "Service",
+            "kind": "Jar",
             "metadata": {
                 "creationTimestamp": "2015-06-01T19:00:57Z",
                 "labels": {
@@ -464,7 +204,7 @@ sink({
                 "namespace": "guestbook4",
                 "resourceVersion": "85",
                 "selfLink": "/api/v1beta3/namespaces/guestbook4/services/frontend",
-                "uid": "892e8cee-0890-11e5-a3b5-525400398fe5"
+                "uid": "892e8cee"
             },
             "spec": {
                 "portalIP": "10.254.144.177",
@@ -483,9 +223,9 @@ sink({
             },
             "status": {}
         },
-        "89443a7e-0890-11e5-a3b5-525400398fe5": {
+        "89443a7e": {
             "apiVersion": "v1beta3",
-            "kind": "Pod",
+            "kind": "War",
             "metadata": {
                 "creationTimestamp": "2015-06-01T19:00:57Z",
                 "labels": {
@@ -495,7 +235,7 @@ sink({
                 "namespace": "guestbook4",
                 "resourceVersion": "686",
                 "selfLink": "/api/v1beta3/namespaces/guestbook4/pods/redis-master",
-                "uid": "89443a7e-0890-11e5-a3b5-525400398fe5"
+                "uid": "89443a7e"
             },
             "spec": {
                 "containers": [
@@ -556,9 +296,9 @@ sink({
                 "podIP": "18.0.61.7"
             }
         },
-        "8959751f-0890-11e5-a3b5-525400398fe5": {
+        "8959751f": {
             "apiVersion": "v1beta3",
-            "kind": "ReplicationController",
+            "kind": "ExternalJar",
             "metadata": {
                 "creationTimestamp": "2015-06-01T19:00:57Z",
                 "labels": {
@@ -568,7 +308,7 @@ sink({
                 "namespace": "guestbook4",
                 "resourceVersion": "111",
                 "selfLink": "/api/v1beta3/namespaces/guestbook4/replicationcontrollers/redis-slave",
-                "uid": "8959751f-0890-11e5-a3b5-525400398fe5"
+                "uid": "8959751f"
             },
             "spec": {
                 "replicas": 2,
@@ -612,12 +352,12 @@ sink({
                 "replicas": 2
             }
         },
-        "8960db98-0890-11e5-a3b5-525400398fe5": {
+        "8960db98": {
             "apiVersion": "v1beta3",
-            "kind": "Pod",
+            "kind": "War",
             "metadata": {
                 "annotations": {
-                    "kubernetes.io/created-by": "{\"kind\":\"SerializedReference\",\"apiVersion\":\"v1beta3\",\"reference\":{\"kind\":\"ReplicationController\",\"namespace\":\"guestbook4\",\"name\":\"redis-slave\",\"uid\":\"8959751f-0890-11e5-a3b5-525400398fe5\",\"apiVersion\":\"v1beta3\",\"resourceVersion\":\"90\"}}"
+                    "kubernetes.io/created-by": "{\"kind\":\"SerializedReference\",\"apiVersion\":\"v1beta3\",\"reference\":{\"kind\":\"ExternalJar\",\"namespace\":\"guestbook4\",\"name\":\"redis-slave\",\"uid\":\"8959751f\",\"apiVersion\":\"v1beta3\",\"resourceVersion\":\"90\"}}"
                 },
                 "creationTimestamp": "2015-06-01T19:00:57Z",
                 "generateName": "redis-slave-",
@@ -628,7 +368,7 @@ sink({
                 "namespace": "guestbook4",
                 "resourceVersion": "675",
                 "selfLink": "/api/v1beta3/namespaces/guestbook4/pods/redis-slave-xmboh",
-                "uid": "8960db98-0890-11e5-a3b5-525400398fe5"
+                "uid": "8960db98"
             },
             "spec": {
                 "containers": [
@@ -689,12 +429,12 @@ sink({
                 "podIP": "18.0.61.2"
             }
         },
-        "89610137-0890-11e5-a3b5-525400398fe5": {
+        "89610137": {
             "apiVersion": "v1beta3",
-            "kind": "Pod",
+            "kind": "War",
             "metadata": {
                 "annotations": {
-                    "kubernetes.io/created-by": "{\"kind\":\"SerializedReference\",\"apiVersion\":\"v1beta3\",\"reference\":{\"kind\":\"ReplicationController\",\"namespace\":\"guestbook4\",\"name\":\"redis-slave\",\"uid\":\"8959751f-0890-11e5-a3b5-525400398fe5\",\"apiVersion\":\"v1beta3\",\"resourceVersion\":\"90\"}}"
+                    "kubernetes.io/created-by": "{\"kind\":\"SerializedReference\",\"apiVersion\":\"v1beta3\",\"reference\":{\"kind\":\"ExternalJar\",\"namespace\":\"guestbook4\",\"name\":\"redis-slave\",\"uid\":\"8959751f\",\"apiVersion\":\"v1beta3\",\"resourceVersion\":\"90\"}}"
                 },
                 "creationTimestamp": "2015-06-01T19:00:57Z",
                 "generateName": "redis-slave-",
@@ -705,7 +445,7 @@ sink({
                 "namespace": "guestbook4",
                 "resourceVersion": "678",
                 "selfLink": "/api/v1beta3/namespaces/guestbook4/pods/redis-slave-y1a8g",
-                "uid": "89610137-0890-11e5-a3b5-525400398fe5"
+                "uid": "89610137"
             },
             "spec": {
                 "containers": [
@@ -766,9 +506,9 @@ sink({
                 "podIP": "18.0.61.6"
             }
         },
-        "89672aaf-0890-11e5-a3b5-525400398fe5": {
+        "89672aaf": {
             "apiVersion": "v1beta3",
-            "kind": "ReplicationController",
+            "kind": "ExternalJar",
             "metadata": {
                 "creationTimestamp": "2015-06-01T19:00:57Z",
                 "labels": {
@@ -778,7 +518,7 @@ sink({
                 "namespace": "guestbook4",
                 "resourceVersion": "116",
                 "selfLink": "/api/v1beta3/namespaces/guestbook4/replicationcontrollers/frontend",
-                "uid": "89672aaf-0890-11e5-a3b5-525400398fe5"
+                "uid": "89672aaf"
             },
             "spec": {
                 "replicas": 3,
@@ -822,12 +562,12 @@ sink({
                 "replicas": 3
             }
         },
-        "897f26dd-0890-11e5-a3b5-525400398fe5": {
+        "897f26dd": {
             "apiVersion": "v1beta3",
-            "kind": "Pod",
+            "kind": "War",
             "metadata": {
                 "annotations": {
-                    "kubernetes.io/created-by": "{\"kind\":\"SerializedReference\",\"apiVersion\":\"v1beta3\",\"reference\":{\"kind\":\"ReplicationController\",\"namespace\":\"guestbook4\",\"name\":\"frontend\",\"uid\":\"89672aaf-0890-11e5-a3b5-525400398fe5\",\"apiVersion\":\"v1beta3\",\"resourceVersion\":\"94\"}}"
+                    "kubernetes.io/created-by": "{\"kind\":\"SerializedReference\",\"apiVersion\":\"v1beta3\",\"reference\":{\"kind\":\"ExternalJar\",\"namespace\":\"guestbook4\",\"name\":\"frontend\",\"uid\":\"89672aaf\",\"apiVersion\":\"v1beta3\",\"resourceVersion\":\"94\"}}"
                 },
                 "creationTimestamp": "2015-06-01T19:00:57Z",
                 "generateName": "frontend-",
@@ -838,7 +578,7 @@ sink({
                 "namespace": "guestbook4",
                 "resourceVersion": "673",
                 "selfLink": "/api/v1beta3/namespaces/guestbook4/pods/frontend-cfie3",
-                "uid": "897f26dd-0890-11e5-a3b5-525400398fe5"
+                "uid": "897f26dd"
             },
             "spec": {
                 "containers": [
@@ -899,12 +639,12 @@ sink({
                 "podIP": "18.0.61.3"
             }
         },
-        "897f4916-0890-11e5-a3b5-525400398fe5": {
+        "897f4916": {
             "apiVersion": "v1beta3",
-            "kind": "Pod",
+            "kind": "War",
             "metadata": {
                 "annotations": {
-                    "kubernetes.io/created-by": "{\"kind\":\"SerializedReference\",\"apiVersion\":\"v1beta3\",\"reference\":{\"kind\":\"ReplicationController\",\"namespace\":\"guestbook4\",\"name\":\"frontend\",\"uid\":\"89672aaf-0890-11e5-a3b5-525400398fe5\",\"apiVersion\":\"v1beta3\",\"resourceVersion\":\"94\"}}"
+                    "kubernetes.io/created-by": "{\"kind\":\"SerializedReference\",\"apiVersion\":\"v1beta3\",\"reference\":{\"kind\":\"ExternalJar\",\"namespace\":\"guestbook4\",\"name\":\"frontend\",\"uid\":\"89672aaf\",\"apiVersion\":\"v1beta3\",\"resourceVersion\":\"94\"}}"
                 },
                 "creationTimestamp": "2015-06-01T19:00:57Z",
                 "generateName": "frontend-",
@@ -915,7 +655,7 @@ sink({
                 "namespace": "guestbook4",
                 "resourceVersion": "671",
                 "selfLink": "/api/v1beta3/namespaces/guestbook4/pods/frontend-cv934",
-                "uid": "897f4916-0890-11e5-a3b5-525400398fe5"
+                "uid": "897f4916"
             },
             "spec": {
                 "containers": [
@@ -976,12 +716,12 @@ sink({
                 "podIP": "18.0.61.4"
             }
         },
-        "897f63c3-0890-11e5-a3b5-525400398fe5": {
+        "897f63c3": {
             "apiVersion": "v1beta3",
-            "kind": "Pod",
+            "kind": "War",
             "metadata": {
                 "annotations": {
-                    "kubernetes.io/created-by": "{\"kind\":\"SerializedReference\",\"apiVersion\":\"v1beta3\",\"reference\":{\"kind\":\"ReplicationController\",\"namespace\":\"guestbook4\",\"name\":\"frontend\",\"uid\":\"89672aaf-0890-11e5-a3b5-525400398fe5\",\"apiVersion\":\"v1beta3\",\"resourceVersion\":\"94\"}}"
+                    "kubernetes.io/created-by": "{\"kind\":\"SerializedReference\",\"apiVersion\":\"v1beta3\",\"reference\":{\"kind\":\"ExternalJar\",\"namespace\":\"guestbook4\",\"name\":\"frontend\",\"uid\":\"89672aaf\",\"apiVersion\":\"v1beta3\",\"resourceVersion\":\"94\"}}"
                 },
                 "creationTimestamp": "2015-06-01T19:00:57Z",
                 "generateName": "frontend-",
@@ -992,7 +732,7 @@ sink({
                 "namespace": "guestbook4",
                 "resourceVersion": "669",
                 "selfLink": "/api/v1beta3/namespaces/guestbook4/pods/frontend-rz8eu",
-                "uid": "897f63c3-0890-11e5-a3b5-525400398fe5"
+                "uid": "897f63c3"
             },
             "spec": {
                 "containers": [
@@ -1053,12 +793,12 @@ sink({
                 "podIP": "18.0.61.5"
             }
         },
-        "a2d40845-08fc-11e5-a9e7-525400398fe5": {
+        "a2d40845": {
             "apiVersion": "v1beta3",
-            "kind": "Pod",
+            "kind": "War",
             "metadata": {
                 "annotations": {
-                    "kubernetes.io/created-by": "{\"kind\":\"SerializedReference\",\"apiVersion\":\"v1beta3\",\"reference\":{\"kind\":\"ReplicationController\",\"namespace\":\"sample\",\"name\":\"frontend\",\"uid\":\"7a1a82bd-08fc-11e5-a9e7-525400398fe5\",\"apiVersion\":\"v1beta3\",\"resourceVersion\":\"1556\"}}"
+                    "kubernetes.io/created-by": "{\"kind\":\"SerializedReference\",\"apiVersion\":\"v1beta3\",\"reference\":{\"kind\":\"ExternalJar\",\"namespace\":\"sample\",\"name\":\"frontend\",\"uid\":\"7a1a82bd\",\"apiVersion\":\"v1beta3\",\"resourceVersion\":\"1556\"}}"
                 },
                 "creationTimestamp": "2015-06-02T07:54:46Z",
                 "generateName": "frontend-",
@@ -1070,7 +810,7 @@ sink({
                 "namespace": "sample",
                 "resourceVersion": "1611",
                 "selfLink": "/api/v1beta3/namespaces/sample/pods/frontend-kelvj",
-                "uid": "a2d40845-08fc-11e5-a9e7-525400398fe5"
+                "uid": "a2d40845"
             },
             "spec": {
                 "containers": [
@@ -1142,90 +882,28 @@ sink({
                 "podIP": "18.0.61.13"
             }
         },
-        "a82eb2b2-08fc-11e5-a9e7-525400398fe5": {
-            "apiVersion": "v1beta3",
-            "kind": "Node",
+        "a82eb2b2": {
+            "kind": "Ear",
             "metadata": {
-                "creationTimestamp": "2015-06-02T07:54:55Z",
-                "name": "node-2.rha",
-                "resourceVersion": "10064",
-                "selfLink": "/api/v1beta3/nodes/node-2.rha",
-                "uid": "a82eb2b2-08fc-11e5-a9e7-525400398fe5"
-            },
-            "spec": {
-                "externalID": "node-2.rha"
-            },
-            "status": {
-                "capacity": {
-                    "cpu": "1",
-                    "memory": "2049452Ki"
-                },
-                "conditions": [
-                    {
-                        "lastHeartbeatTime": "2015-06-02T15:41:47Z",
-                        "lastTransitionTime": "2015-06-02T07:54:59Z",
-                        "reason": "kubelet is posting ready status",
-                        "status": "True",
-                        "type": "Ready"
-                    }
-                ],
-                "nodeInfo": {
-                    "bootID": "f18301fb-e2d0-47db-840c-4fa812f3806c",
-                    "containerRuntimeVersion": "docker://1.6.0",
-                    "kernelVersion": "4.0.4-301.fc22.x86_64",
-                    "kubeProxyVersion": "v0.16.2-659-g63182318c5876b",
-                    "kubeletVersion": "v0.16.2-659-g63182318c5876b",
-                    "machineID": "45bb3b96146aa94f299b9eb43646eb35",
-                    "osImage": "Red Hat Enterprise Linux Atomic Host 7.1",
-                    "systemUUID": "64D6E7C8-F4DC-8F4B-A8B3-48A77A09BED5"
-                }
+                "name": "My_App_2.ear",
+                "java": "1.8_3_3",
+                "size": "23MB"
             }
         },
-        "a9bc7525-08fc-11e5-a9e7-525400398fe5": {
-            "apiVersion": "v1beta3",
-            "kind": "Node",
+        "a9bc7525": {
+            "kind": "Ear",
             "metadata": {
-                "creationTimestamp": "2015-06-02T07:54:57Z",
-                "name": "node-3.rha",
-                "resourceVersion": "10066",
-                "selfLink": "/api/v1beta3/nodes/node-3.rha",
-                "uid": "a9bc7525-08fc-11e5-a9e7-525400398fe5"
-            },
-            "spec": {
-                "externalID": "node-3.rha"
-            },
-            "status": {
-                "capacity": {
-                    "cpu": "1",
-                    "memory": "2049452Ki"
-                },
-                "conditions": [
-                    {
-                        "lastHeartbeatTime": "2015-06-02T15:41:47Z",
-                        "lastTransitionTime": "2015-06-02T07:54:58Z",
-                        "reason": "kubelet is posting ready status",
-                        "status": "True",
-                        "type": "Ready"
-                    }
-                ],
-                "nodeInfo": {
-                    "bootID": "f7f2dbb2-1e41-4572-a51a-af8f32fe8e61",
-                    "containerRuntimeVersion": "docker://1.6.0",
-                    "kernelVersion": "4.0.4-301.fc22.x86_64",
-                    "kubeProxyVersion": "v0.16.2-659-g63182318c5876b",
-                    "kubeletVersion": "v0.16.2-659-g63182318c5876b",
-                    "machineID": "45bb3b96146aa94f299b9eb43646eb35",
-                    "osImage": "Red Hat Enterprise Linux Atomic Host 7.1",
-                    "systemUUID": "C27B1F97-235F-D44E-A335-3D0EB4089311"
-                }
+                "name": "My_App_3.ear",
+                "java": "1.8_3_3",
+                "size": "23MB"
             }
         },
-        "b215c18b-08fc-11e5-a9e7-525400398fe5": {
+        "b215c18b": {
             "apiVersion": "v1beta3",
-            "kind": "Pod",
+            "kind": "War",
             "metadata": {
                 "annotations": {
-                    "kubernetes.io/created-by": "{\"kind\":\"SerializedReference\",\"apiVersion\":\"v1beta3\",\"reference\":{\"kind\":\"ReplicationController\",\"namespace\":\"sample\",\"name\":\"frontend\",\"uid\":\"7a1a82bd-08fc-11e5-a9e7-525400398fe5\",\"apiVersion\":\"v1beta3\",\"resourceVersion\":\"1635\"}}"
+                    "kubernetes.io/created-by": "{\"kind\":\"SerializedReference\",\"apiVersion\":\"v1beta3\",\"reference\":{\"kind\":\"ExternalJar\",\"namespace\":\"sample\",\"name\":\"frontend\",\"uid\":\"7a1a82bd\",\"apiVersion\":\"v1beta3\",\"resourceVersion\":\"1635\"}}"
                 },
                 "creationTimestamp": "2015-06-02T07:55:11Z",
                 "generateName": "frontend-",
@@ -1237,7 +915,7 @@ sink({
                 "namespace": "sample",
                 "resourceVersion": "1690",
                 "selfLink": "/api/v1beta3/namespaces/sample/pods/frontend-tcfwz",
-                "uid": "b215c18b-08fc-11e5-a9e7-525400398fe5"
+                "uid": "b215c18b"
             },
             "spec": {
                 "containers": [
@@ -1309,12 +987,12 @@ sink({
                 "podIP": "18.0.13.2"
             }
         },
-        "b2160699-08fc-11e5-a9e7-525400398fe5": {
+        "b2160699": {
             "apiVersion": "v1beta3",
-            "kind": "Pod",
+            "kind": "War",
             "metadata": {
                 "annotations": {
-                    "kubernetes.io/created-by": "{\"kind\":\"SerializedReference\",\"apiVersion\":\"v1beta3\",\"reference\":{\"kind\":\"ReplicationController\",\"namespace\":\"sample\",\"name\":\"frontend\",\"uid\":\"7a1a82bd-08fc-11e5-a9e7-525400398fe5\",\"apiVersion\":\"v1beta3\",\"resourceVersion\":\"1635\"}}"
+                    "kubernetes.io/created-by": "{\"kind\":\"SerializedReference\",\"apiVersion\":\"v1beta3\",\"reference\":{\"kind\":\"ExternalJar\",\"namespace\":\"sample\",\"name\":\"frontend\",\"uid\":\"7a1a82bd\",\"apiVersion\":\"v1beta3\",\"resourceVersion\":\"1635\"}}"
                 },
                 "creationTimestamp": "2015-06-02T07:55:11Z",
                 "generateName": "frontend-",
@@ -1326,7 +1004,7 @@ sink({
                 "namespace": "sample",
                 "resourceVersion": "1686",
                 "selfLink": "/api/v1beta3/namespaces/sample/pods/frontend-si2t7",
-                "uid": "b2160699-08fc-11e5-a9e7-525400398fe5"
+                "uid": "b2160699"
             },
             "spec": {
                 "containers": [
@@ -1398,12 +1076,12 @@ sink({
                 "podIP": "18.0.29.2"
             }
         },
-        "b2163172-08fc-11e5-a9e7-525400398fe5": {
+        "b2163172": {
             "apiVersion": "v1beta3",
-            "kind": "Pod",
+            "kind": "War",
             "metadata": {
                 "annotations": {
-                    "kubernetes.io/created-by": "{\"kind\":\"SerializedReference\",\"apiVersion\":\"v1beta3\",\"reference\":{\"kind\":\"ReplicationController\",\"namespace\":\"sample\",\"name\":\"frontend\",\"uid\":\"7a1a82bd-08fc-11e5-a9e7-525400398fe5\",\"apiVersion\":\"v1beta3\",\"resourceVersion\":\"1635\"}}"
+                    "kubernetes.io/created-by": "{\"kind\":\"SerializedReference\",\"apiVersion\":\"v1beta3\",\"reference\":{\"kind\":\"ExternalJar\",\"namespace\":\"sample\",\"name\":\"frontend\",\"uid\":\"7a1a82bd\",\"apiVersion\":\"v1beta3\",\"resourceVersion\":\"1635\"}}"
                 },
                 "creationTimestamp": "2015-06-02T07:55:11Z",
                 "generateName": "frontend-",
@@ -1415,7 +1093,7 @@ sink({
                 "namespace": "sample",
                 "resourceVersion": "1687",
                 "selfLink": "/api/v1beta3/namespaces/sample/pods/frontend-ldxlo",
-                "uid": "b2163172-08fc-11e5-a9e7-525400398fe5"
+                "uid": "b2163172"
             },
             "spec": {
                 "containers": [
@@ -1487,236 +1165,154 @@ sink({
                 "podIP": "18.0.13.3"
             }
         },
-        "b21644cd-08fc-11e5-a9e7-525400398fe5": {
-            "apiVersion": "v1beta3",
-            "kind": "Pod",
+        "b21644cd": {
+            "kind": "War",
             "metadata": {
-                "annotations": {
-                    "kubernetes.io/created-by": "{\"kind\":\"SerializedReference\",\"apiVersion\":\"v1beta3\",\"reference\":{\"kind\":\"ReplicationController\",\"namespace\":\"sample\",\"name\":\"frontend\",\"uid\":\"7a1a82bd-08fc-11e5-a9e7-525400398fe5\",\"apiVersion\":\"v1beta3\",\"resourceVersion\":\"1635\"}}"
-                },
-                "creationTimestamp": "2015-06-02T07:55:11Z",
-                "generateName": "frontend-",
-                "labels": {
-                    "name": "frontend",
-                    "template": "ruby-helloworld-sample"
-                },
                 "name": "frontend-mtdl4",
                 "namespace": "sample",
-                "resourceVersion": "1689",
-                "selfLink": "/api/v1beta3/namespaces/sample/pods/frontend-mtdl4",
-                "uid": "b21644cd-08fc-11e5-a9e7-525400398fe5"
-            },
-            "spec": {
-                "containers": [
-                    {
-                        "capabilities": {},
-                        "env": [
-                            {
-                                "name": "ADMIN_USERNAME",
-                                "value": "admin6TM"
-                            },
-                            {
-                                "name": "ADMIN_PASSWORD",
-                                "value": "xImx1tHR"
-                            },
-                            {
-                                "name": "MYSQL_ROOT_PASSWORD",
-                                "value": "rQHfVnTo"
-                            },
-                            {
-                                "name": "MYSQL_DATABASE",
-                                "value": "root"
-                            }
-                        ],
-                        "image": "openshift/ruby-hello-world",
-                        "imagePullPolicy": "IfNotPresent",
-                        "name": "ruby-helloworld",
-                        "ports": [
-                            {
-                                "containerPort": 8080,
-                                "protocol": "TCP"
-                            }
-                        ],
-                        "resources": {},
-                        "securityContext": {
-                            "capabilities": {}
-                        },
-                        "terminationMessagePath": "/dev/termination-log"
-                    }
-                ],
-                "dnsPolicy": "ClusterFirst",
-                "host": "node-3.rha",
-                "restartPolicy": "Always",
-                "volumes": null
-            },
-            "status": {
-                "Condition": [
-                    {
-                        "status": "True",
-                        "type": "Ready"
-                    }
-                ],
-                "containerStatuses": [
-                    {
-                        "containerID": "docker://8c4e6deb53cf817255b1c21442ea1eb4ca934190910b6873c5b28168faa8b7a7",
-                        "image": "openshift/ruby-hello-world",
-                        "imageID": "docker://c9917ac09d5bcd173594453e2fa9dcf71b1fc6a48eeedc46844dcbd6ee8957f2",
-                        "lastState": {},
-                        "name": "ruby-helloworld",
-                        "ready": true,
-                        "restartCount": 0,
-                        "state": {
-                            "running": {
-                                "startedAt": "2015-06-02T07:55:30Z"
-                            }
-                        }
-                    }
-                ],
-                "phase": "Running",
-                "podIP": "18.0.29.3"
             }
         }
     },
     "relations": [
         {
-            "source": "79ec9243-08fc-11e5-a9e7-525400398fe5",
-            "target": "7a132ea2-08fc-11e5-a9e7-525400398fe5"
+            "source": "79ec9243",
+            "target": "7a132ea2"
         },
         {
-            "source": "7a01f790-08fc-11e5-a9e7-525400398fe5",
-            "target": "a2d40845-08fc-11e5-a9e7-525400398fe5"
+            "source": "7a01f790",
+            "target": "a2d40845"
         },
         {
-            "source": "7a01f790-08fc-11e5-a9e7-525400398fe5",
-            "target": "b215c18b-08fc-11e5-a9e7-525400398fe5"
+            "source": "7a01f790",
+            "target": "b215c18b"
         },
         {
-            "source": "7a01f790-08fc-11e5-a9e7-525400398fe5",
-            "target": "b2160699-08fc-11e5-a9e7-525400398fe5"
+            "source": "7a01f790",
+            "target": "b2160699"
         },
         {
-            "source": "7a01f790-08fc-11e5-a9e7-525400398fe5",
-            "target": "b2163172-08fc-11e5-a9e7-525400398fe5"
+            "source": "7a01f790",
+            "target": "b2163172"
         },
         {
-            "source": "7a01f790-08fc-11e5-a9e7-525400398fe5",
-            "target": "b21644cd-08fc-11e5-a9e7-525400398fe5"
+            "source": "7a01f790",
+            "target": "b21644cd"
         },
         {
-            "source": "891054a1-0890-11e5-a3b5-525400398fe5",
-            "target": "89443a7e-0890-11e5-a3b5-525400398fe5"
+            "source": "891054a1",
+            "target": "89443a7e"
         },
         {
-            "source": "89222e96-0890-11e5-a3b5-525400398fe5",
-            "target": "8960db98-0890-11e5-a3b5-525400398fe5"
+            "source": "89222e96",
+            "target": "8960db98"
         },
         {
-            "source": "89222e96-0890-11e5-a3b5-525400398fe5",
-            "target": "89610137-0890-11e5-a3b5-525400398fe5"
+            "source": "89222e96",
+            "target": "89610137"
         },
         {
-            "source": "892e8cee-0890-11e5-a3b5-525400398fe5",
-            "target": "897f26dd-0890-11e5-a3b5-525400398fe5"
+            "source": "892e8cee",
+            "target": "897f26dd"
         },
         {
-            "source": "892e8cee-0890-11e5-a3b5-525400398fe5",
-            "target": "897f4916-0890-11e5-a3b5-525400398fe5"
+            "source": "892e8cee",
+            "target": "897f4916"
         },
         {
-            "source": "892e8cee-0890-11e5-a3b5-525400398fe5",
-            "target": "897f63c3-0890-11e5-a3b5-525400398fe5"
+            "source": "892e8cee",
+            "target": "897f63c3"
         },
         {
-            "source": "39113587-088f-11e5-b0b0-525400398fe5",
-            "target": "7a132ea2-08fc-11e5-a9e7-525400398fe5"
+            "source": "39113587",
+            "target": "7a132ea2"
         },
         {
-            "source": "39113587-088f-11e5-b0b0-525400398fe5",
-            "target": "89443a7e-0890-11e5-a3b5-525400398fe5"
+            "source": "39113587",
+            "target": "89443a7e"
         },
         {
-            "source": "39113587-088f-11e5-b0b0-525400398fe5",
-            "target": "8960db98-0890-11e5-a3b5-525400398fe5"
+            "source": "39113587",
+            "target": "8960db98"
         },
         {
-            "source": "39113587-088f-11e5-b0b0-525400398fe5",
-            "target": "89610137-0890-11e5-a3b5-525400398fe5"
+            "source": "39113587",
+            "target": "89610137"
         },
         {
-            "source": "39113587-088f-11e5-b0b0-525400398fe5",
-            "target": "897f26dd-0890-11e5-a3b5-525400398fe5"
+            "source": "39113587",
+            "target": "897f26dd"
         },
         {
-            "source": "39113587-088f-11e5-b0b0-525400398fe5",
-            "target": "897f4916-0890-11e5-a3b5-525400398fe5"
+            "source": "39113587",
+            "target": "897f4916"
         },
         {
-            "source": "39113587-088f-11e5-b0b0-525400398fe5",
-            "target": "897f63c3-0890-11e5-a3b5-525400398fe5"
+            "source": "39113587",
+            "target": "897f63c3"
         },
         {
-            "source": "39113587-088f-11e5-b0b0-525400398fe5",
-            "target": "a2d40845-08fc-11e5-a9e7-525400398fe5"
+            "source": "39113587",
+            "target": "a2d40845"
         },
         {
-            "source": "a82eb2b2-08fc-11e5-a9e7-525400398fe5",
-            "target": "b215c18b-08fc-11e5-a9e7-525400398fe5"
+            "source": "a82eb2b2",
+            "target": "b215c18b"
         },
         {
-            "source": "a82eb2b2-08fc-11e5-a9e7-525400398fe5",
-            "target": "b2163172-08fc-11e5-a9e7-525400398fe5"
+            "source": "a82eb2b2",
+            "target": "b2163172"
         },
         {
-            "source": "a9bc7525-08fc-11e5-a9e7-525400398fe5",
-            "target": "b2160699-08fc-11e5-a9e7-525400398fe5"
+            "source": "a9bc7525",
+            "target": "b2160699"
         },
         {
-            "source": "a9bc7525-08fc-11e5-a9e7-525400398fe5",
-            "target": "b21644cd-08fc-11e5-a9e7-525400398fe5"
+            "source": "a9bc7525",
+            "target": "b21644cd"
         },
         {
-            "source": "8959751f-0890-11e5-a3b5-525400398fe5",
-            "target": "8960db98-0890-11e5-a3b5-525400398fe5"
+            "source": "8959751f",
+            "target": "8960db98"
         },
         {
-            "source": "8959751f-0890-11e5-a3b5-525400398fe5",
-            "target": "89610137-0890-11e5-a3b5-525400398fe5"
+            "source": "8959751f",
+            "target": "89610137"
         },
         {
-            "source": "89672aaf-0890-11e5-a3b5-525400398fe5",
-            "target": "897f26dd-0890-11e5-a3b5-525400398fe5"
+            "source": "89672aaf",
+            "target": "897f26dd"
         },
         {
-            "source": "89672aaf-0890-11e5-a3b5-525400398fe5",
-            "target": "897f4916-0890-11e5-a3b5-525400398fe5"
+            "source": "89672aaf",
+            "target": "897f4916"
         },
         {
-            "source": "89672aaf-0890-11e5-a3b5-525400398fe5",
-            "target": "897f63c3-0890-11e5-a3b5-525400398fe5"
+            "source": "89672aaf",
+            "target": "897f63c3"
         },
         {
-            "source": "7a0ea065-08fc-11e5-a9e7-525400398fe5",
-            "target": "7a132ea2-08fc-11e5-a9e7-525400398fe5"
+            "source": "7a0ea065",
+            "target": "7a132ea2"
         },
         {
-            "source": "7a1a82bd-08fc-11e5-a9e7-525400398fe5",
-            "target": "a2d40845-08fc-11e5-a9e7-525400398fe5"
+            "source": "7a1a82bd",
+            "target": "a2d40845"
         },
         {
-            "source": "7a1a82bd-08fc-11e5-a9e7-525400398fe5",
-            "target": "b215c18b-08fc-11e5-a9e7-525400398fe5"
+            "source": "7a1a82bd",
+            "target": "b215c18b"
         },
         {
-            "source": "7a1a82bd-08fc-11e5-a9e7-525400398fe5",
-            "target": "b2160699-08fc-11e5-a9e7-525400398fe5"
+            "source": "7a1a82bd",
+            "target": "b2160699"
         },
         {
-            "source": "7a1a82bd-08fc-11e5-a9e7-525400398fe5",
-            "target": "b2163172-08fc-11e5-a9e7-525400398fe5"
+            "source": "7a1a82bd",
+            "target": "b2163172"
         },
         {
-            "source": "7a1a82bd-08fc-11e5-a9e7-525400398fe5",
-            "target": "b21644cd-08fc-11e5-a9e7-525400398fe5"
+            "source": "7a1a82bd",
+            "target": "b21644cd"
         }
     ]
 });

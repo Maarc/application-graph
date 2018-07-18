@@ -65,7 +65,7 @@
         var svg = outer.append("svg")
             .attr("viewBox", "0 0 1600 1200")
             .attr("preserveAspectRatio", "xMidYMid meet")
-            .attr("class", "kube-topology");
+            .attr("class", "app-topology");
 
         var vertices = d3.select();
         var edges = d3.select();
