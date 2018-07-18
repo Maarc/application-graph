@@ -124,8 +124,8 @@
             });
 
         function select(item) {
-	    if (item !== undefined)
-	        selection = item;
+	         if (item !== undefined)
+	          selection = item;
             svg.selectAll("g")
                 .classed("selected", function(d) { return d.item === selection; });
         }
@@ -219,8 +219,8 @@
         }
 
         function resized() {
-	    window.clearTimeout(timeout);
-	    timeout = window.setTimeout(adjust, 150);
+          window.clearTimeout(timeout);
+          timeout = window.setTimeout(adjust, 150);
         }
 
         window.addEventListener('resize', resized);
@@ -235,14 +235,14 @@
                 var added = digest();
                 return [vertices, added];
             },
-	    data: function(new_items, new_relations) {
+            data: function(new_items, new_relations) {
                 items = new_items || { };
                 relations = new_relations || [];
                 var added = digest();
                 return [vertices, added];
             },
             close: function() {
-	        window.removeEventListener('resize', resized);
+                window.removeEventListener('resize', resized);
                 window.clearTimeout(timeout);
 
                 /*
@@ -351,7 +351,7 @@
             function() {
                 return {
                     restrict: 'E',
-	            transclude: true,
+                    transclude: true,
                     template: "<ng-transclude></ng-transclude>",
                     link: function($scope, element, attrs) {
                         var kind = attrs.kind;
