@@ -1,7 +1,7 @@
 {
   "name": "application-topology-graph",
   "version": "0.0.1",
-  "description": "Provides a simple force directed topology graph of kubernetes items.",
+  "description": "Provides a simple force directed topology graph of application items.",
   "moduleType": [
     "globals"
   ],
