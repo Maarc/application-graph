@@ -1,22 +1,20 @@
-Kubernetes Topology Graph
+Application Topology Graph
 =========================
 
-Provides a simple force directed topology graph for kubernetes items.
+Provides a simple force directed topology graph for application items.
 
 #### Disclaimer
 This is an early implementation and is subject to change.
 
-![Screenshot](https://raw.github.com/kubernetes-ui/topology-graph/master/scratch/screenshot.png)
+![Screenshot](https://raw.github.com/Maarc/application-graph/master/scratch/screenshot.png)
 
 Getting Started
 ---------------
 
-The kubernetes describer is provided in the kubernetes-object-describer bower package.
-
-To get the kubernetes-topology-graph bower component in another project, run:
+To get the application-topology-graph bower component in another project, run:
 
 ```
-bower install kubernetes-topology-graph --save
+bower install application-topology-graph --save
 ```
 
 To see a simple running example git clone this repo and run
@@ -37,14 +35,14 @@ Include the JS and CSS files, after angularjs and d3:
 ```xml
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/d3/d3.js"></script>
-<script src="bower_components/kubernetes-topology-graph/dist/topology-graph.js"></script>
-<link rel="stylesheet" href="bower_components/kubernetes-topology-graph/dist/topology-graph.css" />
+<script src="bower_components/topology-graph/dist/topology-graph.js"></script>
+<link rel="stylesheet" href="bower_components/topology-graph/dist/topology-graph.css" />
 ```
 
-Make sure your angular app / module includes ```kubernetesUI``` as a module dependency.
+Make sure your angular app / module includes ```applicationUI``` as a module dependency.
 
 ```
-angular.module('exampleApp', ['kubernetesUI'])
+angular.module('exampleApp', ['applicationUI'])
 ```
 
 Define how the svg vertices (nodes) will display:
@@ -52,11 +50,11 @@ Define how the svg vertices (nodes) will display:
 ```xml
     <svg>
       <defs>
-        <g id="vertex-Node">
+        <g id="vertex-Ear">
           <circle r="15" stroke="black" fill="white"></circle>
           <text y="6">N</text>
         </g>
-        <g id="vertex-Pod">
+        <g id="vertex-War">
           <circle r="15" stroke="black" fill="white"></circle>
           <text y="6">P</text>
         </g>
@@ -68,8 +66,8 @@ Define the following in your controller scope:
 
 ```javascript
 $scope.my_items = {
-    item1: { kind: "Node" },
-    item2: { kind: "Pod" }
+    item1: { kind: "Ear" },
+    item2: { kind: "War" }
 };
 
 $scope.my_relations = [
@@ -77,16 +75,16 @@ $scope.my_relations = [
 ];
 
 $scope.my_kinds = {
-    "Pod": "#vertex-Pod",
-    "Node": "#vertex-Node"
+    "Ear": "#vertex-Ear",
+    "War": "#vertex-War"
 };
 ```
 
 Now include the graph:
 
 ```xml
-<kubernetes-topology-graph items="my_items" relations="my_relations" kinds="my_kinds">
-</kubernetes-topology-graph>
+<topology-graph items="my_items" relations="my_relations" kinds="my_kinds">
+</topology-graph>
 ```
 
 Documentation
@@ -94,13 +92,13 @@ Documentation
 
 #### items
 
-A javascript plain object containing kubernetes items as property values. The keys
+A javascript plain object containing java archive items as property values. The keys
 of this object are used in the ```relations``` attribute. The items should have a
 ```item.kind``` attribute, as well as the usual ```item.metadata``` and so on.
 
 #### kinds
 
-A javascript plain object with kubernetes kinds as keys (ie: *Pod*, *Service* ...). Only
+A javascript plain object with java archive kinds as keys (ie: *Ear*, *War* ...). Only
 items with an ```item.kind``` that is a key in this object will be displayed. The
 values should be xlink hrefs (eg: html ids prefixed with '#'). These will be used to draw
 the vertices.
@@ -130,7 +128,7 @@ selection behavior.
 
 This is a scope event that will be emitted when items are rendered as elements. The argument
 will be D3 selection of <g> elements that correspond to items. Each item has its data set to
-one of the items. The default implementation of this event sets the title from Kubernetes
+one of the items. The default implementation of this event sets the title from java archive
 metadata and tweaks the look of for certain statuses. Use ```event.preventDefault()``` to
 prevent this default behavior.
 
