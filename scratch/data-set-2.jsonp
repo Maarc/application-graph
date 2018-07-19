@@ -55,6 +55,38 @@ sink({
                 "jdk": "1.7_3_3",
                 "size": "1 MB"
             }
+        },
+        "08": {
+            "kind": "Jar",
+            "metadata": {
+                "name": "panda.jar",
+                "jdk": "1.9_3_3",
+                "size": "0.1 MB"
+            }
+        },
+        "09": {
+            "kind": "Jar",
+            "metadata": {
+                "name": "elephant.jar",
+                "jdk": "1.9_3_3",
+                "size": "0.1 MB"
+            }
+        },
+        "10": {
+            "kind": "Jar",
+            "metadata": {
+                "name": "lion.jar",
+                "jdk": "1.9_3_3",
+                "size": "0.1 MB"
+            }
+        },
+        "11": {
+            "kind": "Jar",
+            "metadata": {
+                "name": "giraffe.jar",
+                "jdk": "1.9_3_3",
+                "size": "0.1 MB"
+            }
         }
     },
     "relations": [
@@ -85,6 +117,28 @@ sink({
         {
             "source": "07",
             "target": "03"
+        },
+        {
+            "source": "08",
+            "target": "03"
+        },
+        {
+            "source": "08",
+            "target": "03"
+        },
+        {
+            "source": "09",
+            "target": "03"
+        },
+        {
+            "source": "10",
+            "target": "03"
+        },
+        {
+            "source": "11",
+            "target": "03"
         }
+
+
     ]
 });
