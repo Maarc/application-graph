@@ -262,10 +262,10 @@
         };
     }
 
-    /* The kubernetesUI component is quite loosely bound, define if it doesn't exist */
-    try { angular.module("kubernetesUI"); } catch(e) { angular.module("kubernetesUI", []); }
+    /* The applicationUI component is quite loosely bound, define if it doesn't exist */
+    try { angular.module("applicationUI"); } catch(e) { angular.module("applicationUI", []); }
 
-    return angular.module('kubernetesUI')
+    return angular.module('applicationUI')
         .directive('kubernetesTopologyGraph', [
             function() {
                 return {
