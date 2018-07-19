@@ -33,7 +33,8 @@ kubernetes-topology-graph {
     stroke-width: 1;
 }
 
-.app-topology line.ExternalJarWar {
+.app-topology line.ExternalJarWar,
+.app-topology line.ExternalJarWarApp {
     stroke-linecap: round;
     stroke-dasharray: 5, 2;
 }

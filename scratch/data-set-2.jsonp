@@ -5,7 +5,8 @@ sink({
             "metadata": {
                 "name": "My_App_1.ear",
                 "jdk": "1.8_3_3",
-                "size": "13 MB"
+                "size": "13 MB",
+                "classes": "4303"
             }
         },
         "02": {
@@ -13,7 +14,8 @@ sink({
             "metadata": {
                 "name": "database-1.war",
                 "jdk": "1.6_3_3",
-                "size": "5 MB"
+                "size": "5 MB",
+                "classes": "303"
             }
         },
         "03": {
@@ -21,7 +23,8 @@ sink({
             "metadata": {
                 "name": "database-2.war",
                 "jdk": "1.5_3_3",
-                "size": "4 MB"
+                "size": "4 MB",
+                "classes": "13"
             }
         },
         "04": {
@@ -29,7 +32,8 @@ sink({
             "metadata": {
                 "name": "bull.jar",
                 "jdk": "1.4_3_3",
-                "size": "1 MB"
+                "size": "1 MB",
+                "classes": "3"
             }
         },
         "05": {
@@ -37,7 +41,8 @@ sink({
             "metadata": {
                 "name": "frog.jar",
                 "jdk": "1.3_3_3",
-                "size": "2 MB"
+                "size": "2 MB",
+                "classes": "3"
             }
         },
         "06": {
@@ -45,7 +50,8 @@ sink({
             "metadata": {
                 "name": "butterfly.jar",
                 "jdk": "1.9_3_3",
-                "size": "3 MB"
+                "size": "3 MB",
+                "classes": "33"
             }
         },
         "07": {
@@ -53,7 +59,8 @@ sink({
             "metadata": {
                 "name": "apache-commons.jar",
                 "jdk": "1.7_3_3",
-                "size": "1 MB"
+                "size": "1 MB",
+                "classes": "38"
             }
         },
         "08": {
@@ -61,7 +68,8 @@ sink({
             "metadata": {
                 "name": "panda.jar",
                 "jdk": "1.9_3_3",
-                "size": "0.1 MB"
+                "size": "0.1 MB",
+                "classes": "9"
             }
         },
         "09": {
@@ -69,7 +77,8 @@ sink({
             "metadata": {
                 "name": "elephant.jar",
                 "jdk": "1.9_3_3",
-                "size": "0.1 MB"
+                "size": "0.1 MB",
+                "classes": "5"
             }
         },
         "10": {
@@ -77,7 +86,8 @@ sink({
             "metadata": {
                 "name": "lion.jar",
                 "jdk": "1.9_3_3",
-                "size": "0.1 MB"
+                "size": "0.1 MB",
+                "classes": "3"
             }
         },
         "11": {
@@ -85,7 +95,44 @@ sink({
             "metadata": {
                 "name": "giraffe.jar",
                 "jdk": "1.9_3_3",
-                "size": "0.1 MB"
+                "size": "0.1 MB",
+                "classes": "93"
+            }
+        },
+        "12": {
+            "kind": "WarApp",
+            "metadata": {
+                "name": "bakery.war",
+                "jdk": "1.7_3_3",
+                "size": "12 MB",
+                "classes": "535"
+            }
+        },
+        "13": {
+            "kind": "Jar",
+            "metadata": {
+                "name": "sugar.jar",
+                "jdk": "1.7_3_3",
+                "size": "2 MB",
+                "classes": "66"
+            }
+        },
+        "14": {
+            "kind": "Jar",
+            "metadata": {
+                "name": "flour.war",
+                "jdk": "1.7_3_3",
+                "size": "1 MB",
+                "classes": "24"
+            }
+        },
+        "15": {
+            "kind": "ExternalJar",
+            "metadata": {
+                "name": "apache-utils.jar",
+                "jdk": "1.7_3_3",
+                "size": "9 MB",
+                "classes": "37"
             }
         }
     },
@@ -137,8 +184,18 @@ sink({
         {
             "source": "11",
             "target": "03"
+        },
+        {
+            "source": "13",
+            "target": "12"
+        },
+        {
+            "source": "14",
+            "target": "12"
+        },
+        {
+            "source": "15",
+            "target": "12"
         }
-
-
     ]
 });

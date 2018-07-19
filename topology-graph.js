@@ -310,7 +310,7 @@
                                 added.attr("class", function(d) { return d.item.kind; });
                                 added.append("use").attr("xlink:href", icon);
                                 added.append("title");
-                                vertices.selectAll("title").text(function(d) { return d.item.metadata.name+"\nJDK:"+ d.item.metadata.jdk+"\nSize:"+d.item.metadata.size; });
+                                vertices.selectAll("title").text(function(d) { return d.item.metadata.name+"\n\nJDK:"+ d.item.metadata.jdk+"\nSize:"+d.item.metadata.size+"\nClasses:"+d.item.metadata.classes; });
                                 vertices.classed("weak", weak);
                             }
                             graph.select();

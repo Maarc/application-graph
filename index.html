@@ -48,6 +48,10 @@
       float: left;
       display: block;
     }
+
+    .legend {
+       font-weight: bold;
+    }
   </style>
   <link rel="stylesheet" href="topology-graph.css">
   <script src="bower_components/angular/angular.js"></script>
@@ -62,6 +66,8 @@
     <div class="display"><label id="selected"></label></div>
 
     <div class="controls">
+
+      <label class="legend">Applications: </label>
        <kubernetes-topology-icon kind="Ear">
          <svg class="app-topology">
            <use xlink:href="#vertex-Ear" x="15" y="15"></use>
@@ -69,6 +75,14 @@
        </kubernetes-topology-icon>
        <label>EARs</label>
 
+       <kubernetes-topology-icon kind="WarApp">
+         <svg class="app-topology">
+           <use xlink:href="#vertex-WarApp" x="15" y="15"></use>
+         </svg>
+       </kubernetes-topology-icon>
+       <label>WARs</label>
+      <br/>
+      <label class="legend">Embedded: </label>
        <kubernetes-topology-icon kind="War">
          <svg class="app-topology">
            <use xlink:href="#vertex-War" x="15" y="15"></use>
@@ -88,7 +102,7 @@
            <use xlink:href="#vertex-ExternalJar" x="15" y="15"></use>
          </svg>
        </kubernetes-topology-icon>
-       <label>3rd-party JARs</label>
+       <label>3rd-party JARs&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; </label>
        <button ng-click="poke()">Poke</button>
     </div>
 
@@ -97,6 +111,10 @@
         <g class="Ear" id="vertex-Ear">
           <circle r="15" fill="#fff" stroke="#aaa"></circle>
           <text y="8" x="-0.5" fill="#0B3C5D" font-family="PatternFlyIcons-webfont" font-size="18px" text-anchor="middle">&#xe918;</text>
+        </g>
+        <g class="WarApp" id="vertex-WarApp">
+          <circle r="15" fill="#fff" stroke="#aaa"></circle>
+          <text y="5" x="0.5" fill="#0B3C5D" font-family="FontAwesome" font-size="16px" text-anchor="middle">&#xf1b3;</text>
         </g>
         <g class="War" id="vertex-War">
           <circle r="15" fill="#fff" stroke="#aaa"></circle>
@@ -128,6 +146,7 @@
                 $rootScope.kinds = {
                   Ear: '#vertex-Ear',
                   War: '#vertex-War',
+                  WarApp: '#vertex-WarApp',
                   ExternalJar: '#vertex-ExternalJar',
                   Jar: '#vertex-Jar',
                 };
@@ -140,7 +159,7 @@
                 $rootScope.$on("select", function(ev, item) {
                    var text = "";
                    if (item)
-                       text = "Selected: " + item.metadata.name + " - JDK: " + item.metadata.jdk + " - Size: " + item.metadata.size;
+                       text = "Selected: " + item.metadata.name + " - JDK: " + item.metadata.jdk + " - Size: " + item.metadata.size + " - Classes: "  + item.metadata.classes;
                    angular.element(document.getElementById("selected")).text(text);
                 });
             });
