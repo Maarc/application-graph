@@ -16,7 +16,6 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with Cockpit; If not, see <http://www.gnu.org/licenses/>.
  */
-
 (function(root, factory) {
     if (typeof(define) === 'function' && define.amd)
         define(["angular", "d3" ], factory);
@@ -303,10 +302,6 @@
                             return false;
                         }
 
-                        function title(d) {
-                            return d.item.metadata.name;
-                        }
-
                         function render(args) {
                             var vertices = args[0];
                             var added = args[1];
@@ -315,8 +310,7 @@
                                 added.attr("class", function(d) { return d.item.kind; });
                                 added.append("use").attr("xlink:href", icon);
                                 added.append("title");
-                                vertices.selectAll("title")
-                                     .text(function(d) { return d.item.metadata.name; });
+                                vertices.selectAll("title").text(function(d) { return d.item.metadata.name+"\nJDK:"+ d.item.metadata.jdk+"\nSize:"+d.item.metadata.size; });
                                 vertices.classed("weak", weak);
                             }
                             graph.select();

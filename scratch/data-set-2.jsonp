@@ -4,50 +4,56 @@ sink({
             "kind": "Ear",
             "metadata": {
                 "name": "My_App_1.ear",
-                "java": "1.8_3_3",
-                "size": "23MB"
+                "jdk": "1.8_3_3",
+                "size": "13 MB"
             }
         },
         "02": {
             "kind": "War",
             "metadata": {
                 "name": "database-1.war",
-                "namespace": "sample",
+                "jdk": "1.6_3_3",
+                "size": "5 MB"
             }
         },
         "03": {
             "kind": "War",
             "metadata": {
                 "name": "database-2.war",
-                "namespace": "sample",
+                "jdk": "1.5_3_3",
+                "size": "4 MB"
             }
         },
         "04": {
             "kind": "Jar",
             "metadata": {
                 "name": "bull.jar",
-                "namespace": "default"
+                "jdk": "1.4_3_3",
+                "size": "1 MB"
             }
         },
         "05": {
             "kind": "Jar",
             "metadata": {
                 "name": "frog.jar",
-                "namespace": "default"
+                "jdk": "1.3_3_3",
+                "size": "2 MB"
             }
         },
         "06": {
             "kind": "Jar",
             "metadata": {
                 "name": "butterfly.jar",
-                "namespace": "default"
+                "jdk": "1.9_3_3",
+                "size": "3 MB"
             }
         },
         "07": {
             "kind": "ExternalJar",
             "metadata": {
                 "name": "apache-commons.jar",
-                "namespace": "sample"
+                "jdk": "1.7_3_3",
+                "size": "1 MB"
             }
         }
     },

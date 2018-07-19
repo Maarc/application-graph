@@ -34,10 +34,19 @@
       background-color: lightgray;
       padding: 0 10px;
     }
+
+    .display {
+      position: absolute;
+      top: 60px;
+      left: 60px;
+      right: 60px;
+      background-color: lightgray;
+      padding: 0px 10px;
+    }
+
     #selected {
-      float: right;
+      float: left;
       display: block;
-      margin-top: 15px;
     }
   </style>
   <link rel="stylesheet" href="topology-graph.css">
@@ -50,10 +59,9 @@
     <kubernetes-topology-graph items="data.items" relations="data.relations" kinds="kinds">
     </kubernetes-topology-graph>
 
-    <div class="controls">
-       <button ng-click="poke()">Poke</button>
-       <label id="selected"></label>
+    <div class="display"><label id="selected"></label></div>
 
+    <div class="controls">
        <kubernetes-topology-icon kind="Ear">
          <svg class="app-topology">
            <use xlink:href="#vertex-Ear" x="15" y="15"></use>
@@ -81,6 +89,7 @@
          </svg>
        </kubernetes-topology-icon>
        <label>3rd-party JARs</label>
+       <button ng-click="poke()">Poke</button>
     </div>
 
     <svg class="app-topology" hidden>
@@ -108,11 +117,11 @@
         var datasets = [];
 
         function sink(dataset) {
-	   datasets.push(dataset);
+          datasets.push(dataset);
         }
 
         angular.module('exampleApps', ['kubernetesUI'])
-	    .run(function($rootScope) {
+          .run(function($rootScope) {
                 var index = 0;
                 $rootScope.data = datasets[index];
 
@@ -128,10 +137,10 @@
                    $rootScope.data = datasets[index % datasets.length];
                 };
 
-            		$rootScope.$on("select", function(ev, item) {
+                $rootScope.$on("select", function(ev, item) {
                    var text = "";
                    if (item)
-                       text = "Selected: " + item.metadata.name;
+                       text = "Selected: " + item.metadata.name + " - JDK: " + item.metadata.jdk + " - Size: " + item.metadata.size;
                    angular.element(document.getElementById("selected")).text(text);
                 });
             });
